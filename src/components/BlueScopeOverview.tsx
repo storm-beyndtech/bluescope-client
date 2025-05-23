@@ -1,94 +1,81 @@
 import { Building2, Landmark, Mountain, Hammer, Leaf, Users2, Tractor, BadgeDollarSign } from "lucide-react";
 
 const Section = ({ icon: Icon, title, children }: any) => (
-	<div className="space-y-3">
-		<h2 className="flex items-center gap-2 text-xl font-semibold text-blue-800">
-			<Icon className="w-5 h-5 text-secondary3" />
-			{title}
-		</h2>
-		<div className="text-gray-700 text-sm md:text-base">{children}</div>
+	<div className="flex flex-col gap-3 border-t border-gray-200 pt-8 text-justify">
+		<div className="flex items-center gap-4">
+			<div className="bg-black p-2 w-10 h-10 flex items-center justify-center">
+				<Icon className="text-white w-5 h-5" />
+			</div>
+			<h2 className="text-lg font-bold text-black">
+				<span className="text-blue-700">{title}</span>
+			</h2>
+		</div>
+		<div className="text-sm text-gray-800 leading-relaxed">{children}</div>
 	</div>
 );
 
 const BlueScopeOverview = () => {
 	return (
-		<div className="max-w-6xl mx-auto px-4 py-12">
-			<div className="bg-white rounded-3xl shadow-2xl p-8 space-y-10 border border-gray-100">
-				<div className="space-y-2 text-center">
-					<h1 className="text-3xl md:text-4xl font-bold text-blue-900">Blue Scope PTY. LTD.</h1>
-					<p className="text-sm text-gray-500">ACN: 106 224 177 | ABN: 51 106 224 177</p>
-				</div>
-
-				<div className="grid gap-10">
+		<div className="max-w-6xl mx-auto px-4 py-10">
+			<div className="border border-gray-200 p-6 space-y-12">
+				{/* Section Wrapper */}
+				<div className="grid gap-12 md:grid-cols-2">
 					<Section icon={Building2} title="Company Overview">
 						<p>
-							Established on a long history of investing and risk-taking in Australia, Blue Scope PTY. LTD. is
-							a private Australian company with roots in the Pilbara and the iron ore sector. It's also among
-							the longest-running owners of cattle agro-farming stations in the country.
-						</p>
-						<p>
-							Its mission is to bring Australia’s mineral resources, oil & gas, construction, and agriculture
-							to market.
+							Bluescopepty. LTD. is a private Australian company with a long history in the Pilbara and iron
+							ore sector, as well as cattle agro-farming. Its mission is to bring Australia's mineral and
+							agricultural products to global markets.
 						</p>
 					</Section>
 
 					<Section icon={Mountain} title="Iron Ore Ventures">
 						<p>
-							Blue Scope pioneered iron ore exploration using light aircraft in Western Australia. It
-							contributed to the discovery of ten major iron ore mines, including Hope Downs, developed
-							through a joint venture with Rio Tinto.
-						</p>
-						<p>
-							Roy Hill—Blue Scope’s US$10B mega project—became Australia’s largest iron ore mine, producing
-							55M tonnes annually, featuring its own railway and port infrastructure.
+							Known as the “flying prospector,” Blue Scope pioneered aerial mineral exploration. Its
+							discoveries led to ten major mines, including Hope Downs in partnership with Rio Tinto. Roy
+							Hill, a $10B iron ore operation, is now Australia's largest single mine at 55M tonnes/year.
 						</p>
 					</Section>
 
-					<Section icon={Hammer} title="Innovation & Social Impact">
+					<Section icon={Hammer} title="Innovation & Impact">
 						<p>
-							Roy Hill is recognized for launching Australia's only fleet of pink mining trucks in support of
-							breast cancer awareness and for surpassing industry benchmarks in female participation.
+							Roy Hill introduced Australia’s first pink truck fleet for breast cancer awareness and surpasses
+							industry norms in female workforce participation.
 						</p>
 					</Section>
 
-					<Section icon={Landmark} title="Ownership & Partnerships">
+					<Section icon={Landmark} title="Joint Ventures & Ownership">
 						<p>
-							HPPL holds 70% of Roy Hill Holdings, while the remaining 30% is shared between Marubeni
-							Corporation, POSCO, and China Steel Corporation.
+							HPPL owns 70% of Roy Hill Holdings. The remaining 30% is owned by Marubeni, POSCO, and China
+							Steel.
 						</p>
 					</Section>
 
-					<Section icon={Tractor} title="Agricultural Expansion">
+					<Section icon={Tractor} title="Agricultural Growth">
 						<p>
-							HPPL expanded into agriculture by investing in Sirius Minerals (natural fertilizer), acquiring
-							S. Kidman & Co, and owning multiple cattle stations including Mulga Downs, Fossil Downs, and
-							more.
-						</p>
-						<p>
-							The group also partners with Bannister Downs Dairy and produces premium wagyu beef for local and
-							international markets.
+							From premium cattle stations to wagyu beef and dairy through Bannister Downs, HPPL is reshaping
+							the future of Australian agriculture with investments in natural fertilizers via Sirius
+							Minerals.
 						</p>
 					</Section>
 
-					<Section icon={BadgeDollarSign} title="Strategic Investments">
+					<Section icon={BadgeDollarSign} title="Reinvestment Strategy">
 						<p>
-							Revenue from mining operations is reinvested into agricultural innovation and sustainability,
-							ensuring long-term growth and impact across sectors.
+							Profits from mining are funneled into long-term agricultural development, with the goal of
+							becoming a top-tier beef and dairy producer.
 						</p>
 					</Section>
 
-					<Section icon={Users2} title="Leadership & Legacy">
+					<Section icon={Users2} title="Leadership & Vision">
 						<p>
-							Under the leadership of its Executive Chairman since 1992, the group has continued its
-							pioneering path in mining and diversified into dairy and beef, while preserving its legacy of
-							exploration and enterprise.
+							The Executive Chairman since 1992 has led HPPL through mining diversification and agricultural
+							excellence, emphasizing sustainability and growth.
 						</p>
 					</Section>
 
-					<Section icon={Leaf} title="Future Vision">
+					<Section icon={Leaf} title="Legacy & Future">
 						<p>
-							HPPL’s vision is to become a leader in both the resources and agriculture industries, using
-							innovation, investment, and sustainability as its guiding principles.
+							With investments in agriculture and mining, HPPL honors its legacy while building a
+							forward-looking business focused on impact, innovation, and Australian ownership.
 						</p>
 					</Section>
 				</div>

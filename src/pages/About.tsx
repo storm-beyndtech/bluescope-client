@@ -3,6 +3,7 @@ import Hero from "../components/About/Hero";
 import MissionVison from "../components/About/MissionVison";
 import Testimonials from "../components/About/Testimonials";
 import BlueScopeOverview from "../components/BlueScopeOverview";
+import Cta from "../components/Home/Cta";
 
 const About = () => {
 	return (
@@ -11,7 +12,8 @@ const About = () => {
 			<MissionVison />
 			<AboutSection />
 			<BlueScopeOverview />
-			<Testimonials />
+      <Testimonials />
+      <Cta />
 		</div>
 	);
 };
