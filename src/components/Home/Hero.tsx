@@ -9,7 +9,7 @@ import cryptoGlass2 from "../../assets/Futuristic_Glass_Cube.png";
 
 const Hero: FC = () => {
 	return (
-		<section className="sm:min-h-[600px] relative w-full py-16 md:py-20 overflow-hidden bg-gradient-to-b from-blue-700 via-blue-700/50 to-blue-white text-white">
+		<section className="sm:min-h-[400px] relative w-full py-16 md:py-20 overflow-hidden bg-gradient-to-b from-blue-700 via-blue-700/50 to-blue-white text-white">
 			{/* Floating Background Images */}
 			<motion.img
 				src={cryptoGlass1}
@@ -33,9 +33,8 @@ const Hero: FC = () => {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6 }}
-						className="text-3xl sm:text-4xl md:text-7xl font-bold leading-tight tracking-tight mb-6"
+						className="text-3xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tight mb-6"
 					>
-						<br />
 						Welcome To Bluescope
 					</motion.h1>
 
@@ -43,7 +42,7 @@ const Hero: FC = () => {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.6, delay: 0.2 }}
-						className="text-white/80 font-medium sm:text-lg md:text-xl max-w-2xl mb-8"
+						className="text-white font-regular sm:text-lg max-w-2xl mb-8"
 					>
 						We craft personalized solutions to support your business growth and take you one level closer to
 						your goals.
@@ -55,7 +54,7 @@ const Hero: FC = () => {
 						transition={{ duration: 0.6, delay: 0.3 }}
 					>
 						<Link to="/login">
-							<button className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-xl font-semibold text-sm sm:text-base hover:bg-white/90 transition-colors">
+							<button className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-xl font-semibold text-sm hover:bg-white/90 transition-colors">
 								Create an Account with Us
 								<ChevronRight size={20} />
 							</button>

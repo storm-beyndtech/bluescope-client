@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import type { FC } from "react";
 
@@ -14,11 +12,10 @@ const WhoWeAre: FC = () => {
 			{/* Grid Section */}
 			<div className="max-ctn flex flex-wrap items-center gap-8 sm:justify-center">
 				{/* Left: Stats */}
-				<div className="flex flex-col gap-6 w-full max-w-lg">
+				<div className="flex flex-col gap-6 w-full max-w-xs">
 					{[
-						{ number: 14, label: "Years in the Business", bg: "bg-blue-600", dot: "bg-blue-500" },
-						{ number: 501, label: "Finished Projects", bg: "bg-blue-600", dot: "bg-black" },
-						{ number: 279, label: "Satisfied Clients", bg: "bg-blue-600", dot: "bg-black" },
+						{ number: 5301, label: "Finished Projects", bg: "bg-blue-600", dot: "bg-black" },
+						{ number: 18201, label: "Global Clients", bg: "bg-blue-600", dot: "bg-black" },
 					].map((item, index) => (
 						<motion.div
 							key={index}
@@ -28,9 +25,9 @@ const WhoWeAre: FC = () => {
 							viewport={{ once: true }}
 							className="relative w-full max-w-md"
 						>
-							<div className={`${item.bg} p-6 rounded-md relative z-10`}>
-								<h3 className="text-4xl md:text-5xl font-bold text-white mb-2">{item.number}</h3>
-								<p className="text-sm uppercase text-white tracking-wider">{item.label}</p>
+							<div className={`${item.bg} p-7 py-4 relative z-10`}>
+								<h3 className="text-4xl font-bold text-white mb-1">{item.number}+</h3>
+								<p className="text-sm font-medium text-white/70">{item.label}</p>
 							</div>
 							<div className="absolute -right-2 -bottom-2 z-0">
 								<div className="grid grid-cols-3 gap-1">
@@ -43,13 +40,13 @@ const WhoWeAre: FC = () => {
 					))}
 				</div>
 
-				<div className="w-full max-w-xl">
+				<div className="w-full max-w-3xl text-justify indent-0 leading-relaxed">
 					<motion.p
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.2 }}
 						viewport={{ once: true }}
-						className="text-gray-700 md:text-xl w-full mb-5"
+						className="text-gray-700 w-full mb-5"
 					>
 						We are committed to serving as your trusted partner, preserving and growing your wealth through
 						diverse investment opportunities in mining, agriculture, and philanthropy.
@@ -59,7 +56,7 @@ const WhoWeAre: FC = () => {
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.2 }}
 						viewport={{ once: true }}
-						className="text-gray-700 md:text-xl w-full mb-5"
+						className="text-gray-700 w-full"
 					>
 						With a steadfast dedication to excellence and deep understanding of global financial markets, we
 						offer comprehensive private wealth planning services--customized for your needs and aspirations.
