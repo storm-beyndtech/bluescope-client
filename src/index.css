@@ -1,0 +1,122 @@
+/* Font family */
+@import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body,
+html {
+	height: 100%;
+}
+
+body {
+	font-family: "Geist", sans-serif;
+}
+
+.Poppins {
+	font-family: "Poppins", sans-serif;
+}
+
+/* WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent; /* Hide the scrollbar track (background) */
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #888;
+	border-radius: 10px;
+}
+
+/* Firefox */
+* {
+	scrollbar-color: #888 transparent;
+	scrollbar-width: thin;
+}
+
+.custom-dots {
+	bottom: -25px;
+}
+.custom-dots li button:before {
+	font-size: 8px;
+	color: rgba(255, 255, 255, 0.3);
+}
+.custom-dots li.slick-active button:before {
+	color: rgba(0, 179, 255, 0.8);
+}
+
+.pending {
+	color: #e9a52b;
+}
+.success {
+	color: #4ecb71;
+}
+.failed {
+	color: #d34053;
+}
+
+.customBlur {
+	backdrop-filter: blur(5px);
+}
+
+.customBlur2 {
+	backdrop-filter: blur(20px);
+}
+
+.spin {
+	animation: spin 1s linear infinite;
+	font-size: 1rem;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@layer components {
+	.max-ctn {
+		width: 100%;
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0 16px;
+	}
+
+	.input {
+		@apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-900 pl-5 max-sm:p-4 outline-none sm:border-none border max-sm:border-slate-900 max-sm:rounded-full;
+	}
+
+	.inputLabel {
+		@apply block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1.5;
+	}
+
+	.editUserInput {
+		@apply shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+	}
+
+	.editUserLabel {
+		@apply block mb-2 text-sm font-medium text-gray-900 dark:text-white;
+	}
+
+	.primaryBtn {
+		@apply text-white py-[18px] px-4 inline-block rounded-xl font-semibold text-sm bg-gray-900;
+	}
+}
