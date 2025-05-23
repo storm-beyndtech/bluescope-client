@@ -29,7 +29,7 @@ export default function EventsSection() {
 	const featuredEvents = [
 		{
 			id: 1,
-			title: "Unlocking New Horizons: Exclusive Investment Strategies for Building Generational Wealth",
+			title: "Exclusive Investment Strategies for Building Wealth",
 			description:
 				"Crucial Event Awaits You in Australia. Uncover pivotal updates and engage in high-stakes discussions about the future of our portfolio. Important project advancements and potential expansions are on the table – but full details will be disclosed only upon your attendance. Don't miss this exclusive.",
 			location: "Perth Convention and Exhibition Centre",
@@ -87,24 +87,6 @@ export default function EventsSection() {
 
 	return (
 		<div className="bg-white min-h-screen">
-			{/* Hero Section */}
-			{/* <section className="container mx-auto px-4 py-16 md:py-24">
-				<motion.div
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.6 }}
-					className="max-w-4xl"
-				>
-					<h1 className="text-5xl md:text-6xl font-bold leading-tight">
-						Upcoming <span className="text-[#1e56ff]">Events</span>
-					</h1>
-					<p className="mt-6 text-gray-600 text-lg max-w-2xl">
-						Unlocking New Horizons: Exclusive Investment Strategies for Building Generational Wealth – Join
-						the Live Event.
-					</p>
-				</motion.div>
-			</section> */}
-
 			{/* Featured Events */}
 			<section className="container mx-auto px-4 py-8">
 				<motion.div
@@ -139,7 +121,7 @@ export default function EventsSection() {
 								</div>
 							</div>
 							<div className="p-6">
-								<h3 className="text-2xl font-bold mb-3">{event.title}</h3>
+								<h3 className="text-xl font-semibold mb-3">{event.title}</h3>
 								<p className="text-gray-600 mb-6">{event.description}</p>
 								<div className="flex flex-col space-y-3 mb-6">
 									<div className="flex items-center text-gray-700">
@@ -164,36 +146,6 @@ export default function EventsSection() {
 							</div>
 						</motion.div>
 					))}
-				</div>
-			</section>
-
-			{/* Society Info */}
-			<section className="bg-gray-50 py-16">
-				<div className="container mx-auto px-4">
-					<motion.div
-						className="max-w-3xl mx-auto text-center"
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6 }}
-						viewport={{ once: true }}
-					>
-						<h2 className="text-6xl font-semibold mb-6 uppercase Poppins">
-							Bluescope <span className="text-blue-600">Society</span>
-						</h2>
-						<p className="text-lg text-gray-700 mb-8">
-							Bluescope Society showcases its dedication to investing in initiatives that enhance the
-							well-being of individuals and communities nationwide. We believe in creating lasting impact
-							through strategic investments and community engagement.
-						</p>
-						<div className="flex justify-center">
-							<Link
-								to="/about"
-								className="inline-flex items-center text-[#1e56ff] font-medium hover:underline"
-							>
-								Learn more about our mission <ArrowRight className="ml-2 h-4 w-4" />
-							</Link>
-						</div>
-					</motion.div>
 				</div>
 			</section>
 

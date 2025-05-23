@@ -41,10 +41,10 @@ const Hero: FC = () => {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 0.2 }}
-						className="text-white/90 text-lg md:text-xl leading-relaxed mb-8 max-w-3xl"
+						className="text-white/90 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl"
 					>
-						Explore the future of technology and finance with thought leaders and innovators. Our events are
-						designed to inspire, educate, and connect change-makers like you.
+						Explore technology future & finance with innovative leaders. Our events are designed to inspire,
+						educate, and connect change-makers like you.
 					</motion.p>
 
 					{/* CTA Button */}
