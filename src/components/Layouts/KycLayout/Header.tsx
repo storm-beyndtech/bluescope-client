@@ -19,7 +19,7 @@ const Header = () => {
 	}
 
 	return (
-		<header className="bg-slate-50 dark:bg-slate-950 mb-20 px-4 md:px-6 py-2 flex items-center justify-between transition-colors duration-300">
+		<header className="bg-slate-50 dark:bg-slate-950 px-4 md:px-6 py-2 flex items-center justify-between transition-colors duration-300">
 			{/* Left side - Logo/Home link */}
 			<div className="flex items-center">
 				<Link to="/" className="flex items-center hover:opacity-80 transition-opacity">

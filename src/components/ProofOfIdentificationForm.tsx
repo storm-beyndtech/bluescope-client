@@ -182,7 +182,7 @@ export default function ProofOfIdentificationForm(): JSX.Element {
 	};
 
 	return (
-		<div className="p-6 rounded-lg max-w-5xl mx-auto dark:bg-gray-950 dark:text-white bg-white text-gray-900">
+		<div className="p-6 mt-10 rounded-lg max-w-5xl mx-auto dark:bg-gray-950 dark:text-white bg-white text-gray-900">
 			<div className="flex justify-between items-start mb-6">
 				<h2 className="text-2xl font-semibold dark:text-white text-gray-900">Proof of Identification</h2>
 			</div>
