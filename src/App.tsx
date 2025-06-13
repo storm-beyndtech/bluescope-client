@@ -107,9 +107,9 @@ function App() {
 					) : (
 						<>
 							{
-								//   user.kycStatus === "notSubmitted" ? (
-								// <Route path="/dashboard/*" element={<Navigate to="/kyc" replace />} />
-								// ) :
+								  user.kycStatus !== "approved" ? (
+								<Route path="/dashboard/*" element={<Navigate to="/kyc" replace />} />
+								) :
 								<Route path="/dashboard" element={<DashboardLayout />}>
 									<Route index element={<Dashboard />} />
 									<Route path="investment-plan" element={<InvestmentPlan />} />

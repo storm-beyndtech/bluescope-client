@@ -82,6 +82,8 @@ export default function ProofOfIdentificationForm(): JSX.Element {
 
 	const validateForm = (): boolean => {
 		const newErrors: FormErrors = {};
+		const MAX_FILE_SIZE_MB = 5;
+		const MAX_FILE_SIZE = MAX_FILE_SIZE_MB * 1024 * 1024;
 
 		if (!formData.documentNumber.trim()) {
 			newErrors.documentNumber = "Document number is required";
@@ -93,10 +95,14 @@ export default function ProofOfIdentificationForm(): JSX.Element {
 
 		if (!formData.frontImage) {
 			newErrors.frontImage = "Front side image is required";
+		} else if (formData.frontImage.size > MAX_FILE_SIZE) {
+			newErrors.frontImage = `Front image must be less than ${MAX_FILE_SIZE_MB}MB`;
 		}
 
 		if (!formData.backImage) {
 			newErrors.backImage = "Back side image is required";
+		} else if (formData.backImage.size > MAX_FILE_SIZE) {
+			newErrors.backImage = `Back image must be less than ${MAX_FILE_SIZE_MB}MB`;
 		}
 
 		setErrors(newErrors);

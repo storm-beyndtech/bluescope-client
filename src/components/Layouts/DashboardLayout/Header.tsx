@@ -69,12 +69,11 @@ const Header: React.FC<HeaderProps> = ({ setSidebarOpen }) => {
 						<div className="flex flex-col space-y-3">
 							{/* User info */}
 							<div className="flex items-center space-x-3">
-								<Avatar className="w-10 h-10">
-									<AvatarImage
-										src={`https://ui-avatars.com/api/?name=${user.firstName}+${user.lastName}&background=3b82f6&color=fff`}
-										alt="User avatar"
-									/>
-									<AvatarFallback className="bg-primary text-primary-foreground">U</AvatarFallback>
+								<Avatar className="w-8 h-8">
+									<AvatarImage src={user.profileImage} alt="User avatar" />
+									<AvatarFallback className="bg-blue-500 text-primary-foreground text-sm">
+										<User />
+									</AvatarFallback>
 								</Avatar>
 								<div className="flex flex-col">
 									<span className="text-sm font-medium text-gray-500 dark:text-white">{user.username}</span>
