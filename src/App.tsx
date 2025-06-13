@@ -106,10 +106,9 @@ function App() {
 						</>
 					) : (
 						<>
-							{
-								  user.kycStatus !== "approved" ? (
+							{user.kycStatus !== "approved" ? (
 								<Route path="/dashboard/*" element={<Navigate to="/kyc" replace />} />
-								) :
+							) : (
 								<Route path="/dashboard" element={<DashboardLayout />}>
 									<Route index element={<Dashboard />} />
 									<Route path="investment-plan" element={<InvestmentPlan />} />
@@ -123,7 +122,7 @@ function App() {
 									<Route path="events" element={<EventsPage />} />
 									<Route path="*" element={<Navigate to="/dashboard" replace />} />
 								</Route>
-							}
+							)}
 
 							<Route path="kyc" element={<KYC />} />
 							{/* Redirect regular user from admin routes */}
