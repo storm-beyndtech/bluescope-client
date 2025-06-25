@@ -33,6 +33,9 @@ const Navbar: FC = () => {
 					<Link to="/support" className="text-sm font-medium hover:text-blue-100">
 						Support
 					</Link>
+					<Link to="/retirement" className="text-sm font-medium hover:text-blue-100">
+						Retirement
+					</Link>
 					<Link to="/events" className="text-sm font-medium hover:text-blue-100">
 						Event
 					</Link>

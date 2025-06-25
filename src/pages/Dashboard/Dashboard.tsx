@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { PiggyBank, TrendingUp, Share2, Users, Mail, Check, Copy } from "lucide-react";
 import { contextData } from "@/context/AuthContext";
+import BankingCard from "@/components/BankingCard";
 
 interface User {
 	id: string;
@@ -205,6 +206,10 @@ const Dashboard = () => {
 
 							{/* Right Column */}
 							<div className="space-y-8">
+								{/* Card */}
+								<div>
+									<BankingCard />
+								</div>
 								{/* Email Invitation */}
 								<div>
 									<h3 className="text-xl font-normal tracking-wide text-gray-900 dark:text-gray-100 mb-4">

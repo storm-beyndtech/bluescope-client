@@ -1,5 +1,3 @@
-"use client"
-
 import { motion } from "framer-motion"
 import type { FC } from "react"
 import cryptoGlass1 from '../../assets/Futuristic_Glass_Cube.png'

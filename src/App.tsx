@@ -48,6 +48,7 @@ import EventsPage from "./pages/Dashboard/Events";
 import ManageInvestments from "./pages/Admin/ManageInvestments";
 import InvestmentHistory from "./pages/Admin/InvestmentHistory";
 import AdminInvestmentPlans from "./pages/Admin/ManagePlans";
+import Retirement from "./pages/Retirement";
 
 function App() {
 	const [assetsLoaded, setAssetsLoaded] = useState(false);
@@ -174,6 +175,14 @@ function App() {
 						}
 					/>
 					<Route
+						path="/retirement"
+						element={
+							<PublicLayout>
+								<Retirement />
+							</PublicLayout>
+						}
+					/>
+					<Route
 						path="/events"
 						element={
 							<PublicLayout>
@@ -234,6 +243,14 @@ function App() {
 						element={
 							<PublicLayout>
 								<Events />
+							</PublicLayout>
+						}
+					/>
+					<Route
+						path="/retirement"
+						element={
+							<PublicLayout>
+								<Retirement />
 							</PublicLayout>
 						}
 					/>
