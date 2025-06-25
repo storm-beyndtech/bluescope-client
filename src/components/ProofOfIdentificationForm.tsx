@@ -35,7 +35,7 @@ const defaultData: FormData = {
 	backImage: null,
 };
 
-export default function ProofOfIdentificationForm(): JSX.Element {
+export default function ProofOfIdentificationForm({ onSubmit }: { onSubmit: () => void }): JSX.Element {
 	const [formData, setFormData] = useState<FormData>(defaultData);
 
 	const [loading, setLoading] = useState<boolean>(false);
@@ -166,7 +166,7 @@ export default function ProofOfIdentificationForm(): JSX.Element {
 			});
 
 			// Reset form
-			setFormData(defaultData);
+      setFormData(defaultData);
 
 			if (frontImageRef.current) frontImageRef.current.value = "";
 			if (backImageRef.current) backImageRef.current.value = "";
@@ -177,7 +177,8 @@ export default function ProofOfIdentificationForm(): JSX.Element {
 			});
 			console.error("Error submitting form:", error);
 		} finally {
-			setLoading(false);
+      setLoading(false);
+      onSubmit(); // Call the onSubmit prop to notify parent component
 		}
 	};
 

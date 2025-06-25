@@ -195,8 +195,8 @@ export default function KYC() {
 	const url = import.meta.env.VITE_REACT_APP_SERVER_URL;
 
 	// Check if user has already submitted KYC
-	const hasSubmittedKYC = user?.kycStatus && user.kycStatus !== "not_submitted" && !showForm;
-
+	const hasSubmittedKYC = user?.kycStatus && user.kycStatus !== "notSubmitted" && !showForm;
+	console.log(user);
 	const handleResubmit = () => {
 		setShowForm(true);
 	};
@@ -228,6 +228,11 @@ export default function KYC() {
 		navigate("/dashboard");
 	};
 
+	const handleSubmittedKYC = () => {
+		setShowForm(false);
+		handleRefreshStatus();
+	};
+
 	return (
 		<div className="bg-slate-50 dark:bg-slate-950">
 			<Header />
@@ -240,7 +245,7 @@ export default function KYC() {
 					isRefreshing={isRefreshing}
 				/>
 			) : (
-				<ProofOfIdentificationForm />
+				<ProofOfIdentificationForm onSubmit={handleSubmittedKYC} />
 			)}
 		</div>
 	);
