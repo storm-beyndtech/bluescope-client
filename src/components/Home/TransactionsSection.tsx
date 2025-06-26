@@ -6,7 +6,6 @@ interface Transaction {
 	hash: string;
 	time: number;
 	value: number;
-	from: string;
 	to: string;
 	symbol: string;
 	id: string;
@@ -60,7 +59,6 @@ const generateRandomTransaction = (): Transaction => {
 		hash: generateRandomHash(),
 		time: Date.now() - Math.random() * 3600000, // Random time within last hour
 		value,
-		from: generateRandomAddress(),
 		to: generateRandomAddress(),
 		symbol,
 		id: `tx-${Date.now()}-${Math.random()}`,
@@ -195,7 +193,7 @@ export default function TransactionsSection() {
 						)}
 					</div>
 					<p className="text-gray-600 text-sm sm:text-base">
-						Real-time transactions across multiple blockchains
+						Real-time transactions on Bluevestapty
 					</p>
 				</motion.div>
 
@@ -206,9 +204,6 @@ export default function TransactionsSection() {
 								<tr className="bg-gray-50 border-b border-gray-200">
 									<th className="px-4 py-3 text-left text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider w-1/3">
 										Transaction Hash
-									</th>
-									<th className="px-4 py-3 text-left text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider w-1/6">
-										From
 									</th>
 									<th className="px-4 py-3 text-left text-xs sm:text-sm font-medium text-gray-500 uppercase tracking-wider w-1/6">
 										To
@@ -242,9 +237,6 @@ export default function TransactionsSection() {
 									>
 										<td className="px-4 py-3 sm:py-4 truncate text-xs sm:text-sm text-gray-900 font-mono">
 											{formatHash(transaction.hash)}
-										</td>
-										<td className="px-4 py-3 sm:py-4 truncate text-xs sm:text-sm text-gray-500 font-mono">
-											{formatAddress(transaction.from)}
 										</td>
 										<td className="px-4 py-3 sm:py-4 truncate text-xs sm:text-sm text-gray-500 font-mono">
 											{formatAddress(transaction.to)}

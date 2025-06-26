@@ -28,7 +28,7 @@ export default function MissionVision() {
           >
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-semibold text-gray-300 mb-4 sm:mb-6">Our Mission</h2>
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
-              At Bluescope, our mission is to redefine investment by tokenizing real-world assets, making them easily
+              At Bluevestapty, our mission is to redefine investment by tokenizing real-world assets, making them easily
               accessible and tradable across the globe. We are committed to enabling secure, borderless opportunities
               for everyone — from first-time investors to seasoned institutions.
             </p>
@@ -60,7 +60,7 @@ export default function MissionVision() {
             <h2 className="text-4xl sm:text-5xl md:text-7xl font-semibold text-gray-300 mb-4 sm:mb-6">Our Vision</h2>
             <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
               We envision a decentralized future where investing in tokenized assets is seamless, inclusive, and
-              empowering. Bluescope aims to be a global pioneer in bridging traditional finance with blockchain
+              empowering. Bluevestapty aims to be a global pioneer in bridging traditional finance with blockchain
               innovation — unlocking breakthrough opportunities for wealth creation.
             </p>
           </motion.div>

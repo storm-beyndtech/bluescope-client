@@ -75,7 +75,7 @@ const EventsPage: React.FC = () => {
 			title: "Sustainable Investment Workshop",
 			description:
 				"Learn about sustainable investment strategies and how to incorporate ESG factors into your portfolio.",
-			location: "Bluescope Headquarters, Sydney",
+			location: "Bluevestapty Headquarters, Sydney",
 			date: "25th Oct, 2025",
 			time: "09:30 AM - 12:30 PM",
 			category: "Workshop",

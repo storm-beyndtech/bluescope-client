@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Shield, Zap, TrendingUp } from "lucide-react";
+import { SiVisa } from "react-icons/si"; // Add this import - try this Visa logo
 import type { FC } from "react";
 import { Link } from "react-router-dom";
 
@@ -79,18 +80,44 @@ const InvestorCard: FC = () => {
 								>
 									{/* Card illustration */}
 									<div className="relative bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl shadow-lg p-6 w-72 h-96">
-										<div className="absolute top-6 left-6 right-6 h-12 bg-gradient-to-r from-blue-300 to-blue-400 rounded-lg opacity-50"></div>
-										<div className="absolute top-24 left-6 right-6 h-8 bg-blue-300 rounded-lg opacity-30"></div>
-										<div className="absolute top-36 left-6 right-6 h-8 bg-blue-300 rounded-lg opacity-30"></div>
-										<div className="absolute bottom-24 left-6 right-6 h-16 bg-blue-300 rounded-lg opacity-20"></div>
-										<div className="absolute bottom-6 left-6 w-16 h-12 bg-blue-300 rounded-lg opacity-30"></div>
-										<div className="absolute bottom-6 right-6 w-16 h-12 bg-blue-300 rounded-lg opacity-30"></div>
+										{/* Visa logo */}
+										<div className="absolute top-6 right-6">
+											<SiVisa className="text-white text-4xl" />
+										</div>
 
-										{/* Crypto illustration in bottom right */}
-										<div className="absolute bottom-4 right-4">
+										{/* Card elements with original style */}
+										<div className="absolute top-20 left-6 right-6 h-12 bg-gradient-to-r from-blue-300 to-blue-400 rounded-lg opacity-50"></div>
+
+										{/* Card number area */}
+										<div className="absolute top-36 left-6">
+											<div className="text-white font-mono text-sm tracking-wider">4532 **** **** 8901</div>
+										</div>
+
+										<div className="absolute top-48 left-6 right-6 h-8 bg-blue-300 rounded-lg opacity-30"></div>
+
+										{/* Card holder and expiry */}
+										<div className="absolute bottom-20 left-6">
+											<div className="text-xs text-blue-200 uppercase tracking-wide">Card Holder</div>
+											<div className="text-white text-sm font-medium">PREMIUM INVESTOR</div>
+										</div>
+
+										<div className="absolute bottom-20 right-6">
+											<div className="text-xs text-blue-200 uppercase tracking-wide">Valid Thru</div>
+											<div className="text-white text-sm font-medium">12/29</div>
+										</div>
+
+										<div className="absolute bottom-6 left-6 w-16 h-12 bg-blue-300 rounded-lg opacity-30"></div>
+
+										{/* CVV area */}
+										<div className="absolute bottom-8 right-6">
+											<div className="text-xs text-blue-200">CVV: ***</div>
+										</div>
+
+										{/* Crypto illustration */}
+										<div className="absolute bottom-4 right-20">
 											<svg
-												width="80"
-												height="80"
+												width="32"
+												height="32"
 												viewBox="0 0 80 80"
 												fill="none"
 												xmlns="http://www.w3.org/2000/svg"

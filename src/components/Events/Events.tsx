@@ -68,7 +68,7 @@ export default function EventsSection() {
 			title: "Sustainable Investment Workshop",
 			description:
 				"Learn about sustainable investment strategies and how to incorporate ESG factors into your portfolio.",
-			location: "Bluescope Headquarters, Sydney",
+			location: "Bluevestapty Headquarters, Sydney",
 			date: "25th Oct, 2025",
 			time: "09:30 AM - 12:30 PM",
 			category: "Workshop",
@@ -247,7 +247,7 @@ export default function EventsSection() {
 								<h3 className="text-xl font-bold">Our Global Events</h3>
 							</div>
 							<p className="text-gray-700 mb-6">
-								Bluescope hosts events across the globe, bringing together investors, industry experts, and
+								Bluevestapty hosts events across the globe, bringing together investors, industry experts, and
 								community leaders to discuss the future of wealth building and sustainable investments.
 							</p>
 							<div className="space-y-4">

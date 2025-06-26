@@ -104,11 +104,11 @@ export default function Reports() {
 					className="max-w-4xl"
 				>
 					<h1 className="text-5xl md:text-6xl font-bold leading-tight">
-						Bluescopepty's <span className="text-[#1e56ff]">Q3 2023</span> Performance{" "}
+						Bluevestapty's <span className="text-[#1e56ff]">Q3 2024</span> Performance{" "}
 						<span className="text-[#1e56ff]">Overview</span>
 					</h1>
 					<p className="mt-6 text-gray-600 text-lg max-w-2xl">
-						In the third quarter of 2024, Bluescopepty achieved a solid growth trajectory, with total sales
+						In the third quarter of 2024, Bluevestapty achieved a solid growth trajectory, with total sales
 						increasing by $4.5 million, a 2.8% rise compared to the previous quarter, bringing the total to
 						$161.5 million.
 					</p>
@@ -311,7 +311,7 @@ export default function Reports() {
 				>
 					<h4 className="text-sm uppercase mb-4">Reports</h4>
 					<h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
-						Q3 2023 Performance Highlights and Market Analysis
+						Q3 2024 Performance Highlights and Market Analysis
 					</h2>
 					<p className="mb-4">
 						Product sales experienced a robust surge, rising by $11.1 million, reflecting a 9.6% increase over

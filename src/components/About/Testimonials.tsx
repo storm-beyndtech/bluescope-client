@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const testimonials = [
 	{
 		id: 1,
-		text: "BlueScope has consistently demonstrated leadership in Australia's mining sector. Their long-term commitment to sustainable iron ore exploration has set a benchmark in the industry.",
+		text: "Bluevestapty has consistently demonstrated leadership in Australia's mining sector. Their long-term commitment to sustainable iron ore exploration has set a benchmark in the industry.",
 		author: "Michael J.",
 		position: "Mining Consultant",
 		image:
@@ -13,7 +13,7 @@ const testimonials = [
 	},
 	{
 		id: 2,
-		text: "We've worked with BlueScope on multiple infrastructure projects in the Pilbara. Their attention to safety, innovation, and efficiency is second to none.",
+		text: "We've worked with Bluevestapty on multiple infrastructure projects in the Pilbara. Their attention to safety, innovation, and efficiency is second to none.",
 		author: "Sarah L.",
 		position: "Engineering Project Manager",
 		image:
@@ -21,7 +21,7 @@ const testimonials = [
 	},
 	{
 		id: 3,
-		text: "From mineral extraction to beef production, BlueScope's integrated approach to natural resource management is impressive. Their work with Roy Hill is transformative.",
+		text: "From mineral extraction to beef production, Bluevestapty's integrated approach to natural resource management is impressive. Their work with Roy Hill is transformative.",
 		author: "David N.",
 		position: "Resource Economist",
 		image:
@@ -29,7 +29,7 @@ const testimonials = [
 	},
 	{
 		id: 4,
-		text: "BlueScope's investment in agriculture, especially in premium wagyu beef and dairy operations, proves their dedication to quality and sustainability.",
+		text: "Bluevestapty's investment in agriculture, especially in premium wagyu beef and dairy operations, proves their dedication to quality and sustainability.",
 		author: "Emma R.",
 		position: "Agricultural Export Specialist",
 		image:
@@ -37,7 +37,7 @@ const testimonials = [
 	},
 	{
 		id: 5,
-		text: "The Roy Hill operation is a world-class mining venture, and BlueScope's role in pioneering it cannot be overstated. Their vision created jobs and lasting impact.",
+		text: "The Roy Hill operation is a world-class mining venture, and Bluevestapty's role in pioneering it cannot be overstated. Their vision created jobs and lasting impact.",
 		author: "Andrew F.",
 		position: "Logistics & Supply Chain Director",
 		image:
@@ -45,7 +45,7 @@ const testimonials = [
 	},
 	{
 		id: 6,
-		text: "BlueScope is not just a mining company—they're nation builders. Their legacy in the Pilbara and contributions to Australian industry are inspirational.",
+		text: "Bluevestapty is not just a mining company—they're nation builders. Their legacy in the Pilbara and contributions to Australian industry are inspirational.",
 		author: "Julie T.",
 		position: "Government Affairs Advisor",
 		image:
@@ -53,7 +53,7 @@ const testimonials = [
 	},
 	{
 		id: 7,
-		text: "I've dealt with many companies in the cattle and farming sector, but few show the same level of innovation and long-term planning as BlueScope.",
+		text: "I've dealt with many companies in the cattle and farming sector, but few show the same level of innovation and long-term planning as Bluevestapty.",
 		author: "Luke S.",
 		position: "Agricultural Investor",
 		image:
@@ -61,7 +61,7 @@ const testimonials = [
 	},
 	{
 		id: 8,
-		text: "What stands out about BlueScope is their ability to combine tradition with innovation—bringing together heritage cattle stations and cutting-edge resource development.",
+		text: "What stands out about Bluevestapty is their ability to combine tradition with innovation—bringing together heritage cattle stations and cutting-edge resource development.",
 		author: "Naomi K.",
 		position: "Corporate Strategy Consultant",
 		image:

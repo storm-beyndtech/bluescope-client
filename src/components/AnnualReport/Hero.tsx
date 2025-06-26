@@ -40,7 +40,7 @@ const Hero: FC = () => {
             transition={{ duration: 0.5 }}
             className="text-white text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6 leading-tight"
           >
-            Q3 2023 Performance<br />Highlights from Bluesteel Pty Ltd
+            Q3 2024 Performance<br />Highlights from Bluevestapty Ltd
           </motion.h1>
 
           <motion.p

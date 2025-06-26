@@ -563,7 +563,7 @@ const Signup = () => {
 
 			{/* Footer */}
 			<div className="mt-10 text-center text-xs sm:text-sm text-gray-400">
-				© {new Date().getFullYear()} BlueScope™. All rights reserved.
+				© {new Date().getFullYear()} Bluevestapty™. All rights reserved.
 			</div>
 
 			{/* Floating Illustration */}

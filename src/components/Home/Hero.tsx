@@ -35,7 +35,7 @@ const Hero: FC = () => {
 						transition={{ duration: 0.6 }}
 						className="text-3xl sm:text-6xl md:text-7xl font-bold leading-tight tracking-tight mb-6"
 					>
-						Welcome To Bluescope
+						Welcome To Bluevest
 					</motion.h1>
 
 					<motion.p

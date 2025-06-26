@@ -125,11 +125,11 @@ const RetirementPlanning = () => {
 					<div className="grid lg:grid-cols-2 gap-16 items-center">
 						<div>
 							<h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8 tracking-tight leading-tight">
-								Retirement Planning with <span className="text-blue-500">Bluescopepty</span>
+								Retirement Planning with <span className="text-blue-500">Bluevestapty</span>
 							</h2>
 							<p className="text-xl text-gray-600 mb-8 leading-relaxed">
 								Planning for retirement is one of the most important financial decisions you will make in your
-								lifetime. At Bluescopepty, we understand that building a secure future requires careful
+								lifetime. At Bluevestapty, we understand that building a secure future requires careful
 								planning and expert guidance. Whether you're just starting to save for retirement or nearing
 								the end of your career, our personalized retirement planning solutions ensure you can retire
 								comfortably and live the life you've always envisioned.
@@ -230,12 +230,12 @@ const RetirementPlanning = () => {
 				</div>
 			</section>
 
-			{/* Why Choose Bluescopepty */}
+			{/* Why Choose Bluevestapty */}
 			<section className="py-20 px-4 sm:px-6 lg:px-8">
 				<div className="max-w-6xl mx-auto">
 					<div className="mb-16">
 						<h2 className="text-4xl font-bold text-gray-900 mb-6">
-							Why Choose <span className="text-blue-500">Bluescopepty</span> for Your Retirement Planning?
+							Why Choose <span className="text-blue-500">Bluevestapty</span> for Your Retirement Planning?
 						</h2>
 						<p className="text-xl text-gray-600 max-w-4xl leading-relaxed">
 							We take a holistic approach to retirement planning, ensuring that your unique financial needs
@@ -266,7 +266,7 @@ const RetirementPlanning = () => {
 						<div>
 							<h3 className="text-4xl font-bold text-gray-900 mb-8">Planning for Longevity and Healthcare</h3>
 							<p className="text-lg text-gray-600 mb-8 leading-relaxed">
-								With increasing life expectancies, Bluescopepty helps you plan for a longer retirement. We
+								With increasing life expectancies, Bluevestapty helps you plan for a longer retirement. We
 								ensure that your savings and income streams are sustainable, and we factor in healthcare costs
 								to give you peace of mind in your later years.
 							</p>

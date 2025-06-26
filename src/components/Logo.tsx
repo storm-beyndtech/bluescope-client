@@ -14,7 +14,7 @@ type LogoProps = {
 /**
  * Generic Logo component that renders a single image variant.
  */
-export default function Logo({ src = logoImg, alt = 'bluescope Logo' }: LogoProps) {
+export default function Logo({ src = logoImg, alt = 'Bluevestapty Logo' }: LogoProps) {
   return (
     <a href="/" className="flex items-center">
       <img

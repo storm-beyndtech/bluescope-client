@@ -20,7 +20,7 @@ export default function AboutSection() {
 
 					{/* Right side - Blue background with content */}
 					<div className="w-full md:w-2/3 bg-blue-500 text-white p-6 sm:p-8 md:p-10 lg:p-12">
-						<h3 className="text-base sm:text-lg font-medium mb-3 sm:mb-4">About BlueScopePty LTD</h3>
+						<h3 className="text-base sm:text-lg font-medium mb-3 sm:mb-4">About Bluevestapty LTD</h3>
 
 						<motion.h2
 							className="text-4xl lg:text-5xl font-semibold mb-4 sm:mb-6"
@@ -37,7 +37,7 @@ export default function AboutSection() {
 							whileInView={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.6, delay: 0.2 }}
 						>
-							BlueScope Pty Ltd is a proud Australian company with a rich history of pioneering mineral
+							Bluevestapty is a proud Australian company with a rich history of pioneering mineral
 							resource exploration, mining, and agricultural innovation. We specialize in delivering
 							sustainable growth across iron ore mining, oil & gas, construction, and premium agriculture.
 						</motion.p>

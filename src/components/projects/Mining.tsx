@@ -97,7 +97,7 @@ export default function Mining() {
 						<Users className="h-8 w-8 sm:h-10 sm:w-10 text-[#1e56ff] mb-3 sm:mb-4" />
 						<h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Community Engagement</h3>
 						<p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">
-							The Bluescopepty Partners believes it is important to follow the science. We are 100% compliant
+							The Bluevestapty Partners believes it is important to follow the science. We are 100% compliant
 							with all legislation and regulations established by the government targeting a reduction of
 							emissions by 43% below 2005 levels by 2030 and net zero by 2050.
 						</p>

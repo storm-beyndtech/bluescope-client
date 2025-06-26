@@ -213,7 +213,7 @@ const Login: React.FC = () => {
 
 			{/* Footer */}
 			<div className="mt-8 text-center text-sm text-gray-400">
-				© {new Date().getFullYear()} BlueScope™. All rights reserved.
+				© {new Date().getFullYear()} Bluevestapty™. All rights reserved.
 			</div>
 
 			{/* Floating Illustration */}

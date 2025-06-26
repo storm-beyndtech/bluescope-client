@@ -39,7 +39,7 @@ const Hero: FC = () => {
 						transition={{ duration: 0.5 }}
 						className="text-white text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6 leading-tight"
 					>
-						Bluescopepty Discovery
+						Bluevestapty Discovery
 					</motion.h1>
 
 					<motion.p
@@ -48,7 +48,7 @@ const Hero: FC = () => {
 						transition={{ duration: 0.5, delay: 0.2 }}
 						className="text-white text-lg leading-relaxed mb-8"
 					>
-						Bluescopepty Ltd is committed to redefining how individuals and enterprises approach asset
+						Bluevestapty Ltd is committed to redefining how individuals and enterprises approach asset
 						transformation. We turn potential into progress, bridging innovation with practical solutions that
 						drive sustainable growth.
 					</motion.p>

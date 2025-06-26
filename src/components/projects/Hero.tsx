@@ -39,7 +39,7 @@ const Hero: FC = () => {
 						transition={{ duration: 0.5 }}
 						className="text-white text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6 leading-tight"
 					>
-						BlueScope Projects
+						Bluevestapty Projects
 					</motion.h1>
 
 					<motion.p

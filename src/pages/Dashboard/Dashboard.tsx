@@ -29,16 +29,16 @@ const Dashboard = () => {
 	};
 
 	const handleShareEmail = () => {
-		const subject = encodeURIComponent("Join Bluescopepty - Investment Platform");
+		const subject = encodeURIComponent("Join Bluevestapty - Investment Platform");
 		const body = encodeURIComponent(
-			`Hi! I've been using Bluescopepty for my investments and thought you might be interested. Use my referral link to get started: ${window.location.origin}/?ref=${user.username}`,
+			`Hi! I've been using Bluevestapty for my investments and thought you might be interested. Use my referral link to get started: ${window.location.origin}/?ref=${user.username}`,
 		);
 		window.open(`mailto:?subject=${subject}&body=${body}`);
 	};
 
 	const handleShareSocial = (platform: "facebook" | "twitter") => {
 		const referralLink = `${window.location.origin}/?ref=${user.username}`;
-		const message = encodeURIComponent("Join me on Bluescopepty - Smart Investment Platform");
+		const message = encodeURIComponent("Join me on Bluevestapty - Smart Investment Platform");
 
 		if (platform === "facebook") {
 			window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(referralLink)}`);
@@ -148,11 +148,11 @@ const Dashboard = () => {
 									<h2 className="text-3xl font-normal tracking-wide text-gray-900 dark:text-gray-100 mb-4">
 										Earn with{" "}
 										<span className="font-normal bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-											Bluescopepty
+											Bluevestapty
 										</span>
 									</h2>
 									<p className="text-gray-600 dark:text-gray-400 leading-relaxed font-normal tracking-wide">
-										Invite your friends to Bluescopepty. When they sign up and invest, you'll earn commission
+										Invite your friends to Bluevestapty. When they sign up and invest, you'll earn commission
 										on their investments and they get access to our premium investment platform.
 									</p>
 								</div>
@@ -168,7 +168,7 @@ const Dashboard = () => {
 												Send Invitation
 											</h3>
 											<p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
-												Send your referral link to friends and tell them about Bluescopepty's investment
+												Send your referral link to friends and tell them about Bluevestapty's investment
 												opportunities.
 											</p>
 										</div>
@@ -216,7 +216,7 @@ const Dashboard = () => {
 										Invite your friends
 									</h3>
 									<p className="text-sm text-gray-600 dark:text-gray-400 mb-5 leading-relaxed font-normal">
-										Send them an email invitation to join Bluescopepty investment platform.
+										Send them an email invitation to join Bluevestapty investment platform.
 									</p>
 									<div className="flex gap-3">
 										<input

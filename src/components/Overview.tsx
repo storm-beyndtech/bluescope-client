@@ -14,7 +14,7 @@ const Section = ({ icon: Icon, title, children }: any) => (
 	</div>
 );
 
-const BlueScopeOverview = () => {
+const Overview = () => {
 	return (
 		<div className="max-w-6xl mx-auto px-4 py-10">
 			<div className="border border-gray-200 p-6 space-y-12">
@@ -22,7 +22,7 @@ const BlueScopeOverview = () => {
 				<div className="grid gap-12 md:grid-cols-2">
 					<Section icon={Building2} title="Company Overview">
 						<p>
-							Bluescopepty. LTD. is a private Australian company with a long history in the Pilbara and iron
+							Bluevestapty. LTD. is a private Australian company with a long history in the Pilbara and iron
 							ore sector, as well as cattle agro-farming. Its mission is to bring Australia's mineral and
 							agricultural products to global markets.
 						</p>
@@ -84,4 +84,4 @@ const BlueScopeOverview = () => {
 	);
 };
 
-export default BlueScopeOverview;
+export default Overview;

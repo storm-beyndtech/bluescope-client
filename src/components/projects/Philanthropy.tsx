@@ -45,7 +45,7 @@ export default function Philanthropy() {
 					>
 						<h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Community Impact</h3>
 						<p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-6">
-							Bluescope Society showcases its dedication to investing in initiatives that enhance the
+							Bluevestapty Society showcases its dedication to investing in initiatives that enhance the
 							well-being of individuals and communities nationwide. Through strategic partnerships and
 							targeted programs, we aim to create lasting positive change in the communities where we operate.
 						</p>

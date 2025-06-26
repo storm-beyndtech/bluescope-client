@@ -1,5 +1,3 @@
-"use client"
-
 import { Link } from "react-router-dom"
 import { Twitter, Facebook, Linkedin, Youtube } from "lucide-react"
 import type { FC } from "react"
@@ -12,7 +10,7 @@ const Footer: FC = () => {
 
           {/* Logo and tagline */}
           <div className="md:max-w-sm">
-            <h2 className="text-2xl font-semibold">Bluescope</h2>
+            <h2 className="text-2xl font-semibold">Bluevestapty</h2>
             <p className="text-sm mt-2">
               Global expert in technology in medicine. <br className="hidden md:block" />
               Subsidized by EU funds.
