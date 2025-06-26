@@ -7,6 +7,7 @@ import TransactionsSection from "../components/Home/TransactionsSection";
 import MissionVision from "../components/About/MissionVison";
 import StepsSection from "@/components/Home/StepsSection";
 import InvestmentOverviewSection from "@/components/Home/InvestmentOverviewSection";
+import Reviews from "@/components/Reviews";
 
 const Home: React.FC = () => {
 	return (
@@ -19,6 +20,7 @@ const Home: React.FC = () => {
 			<UnifiedBusinessSections />
 			<InvestorCard />
 			<TransactionsSection />
+			<Reviews />
 			<Cta />
 		</div>
 	);

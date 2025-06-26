@@ -82,7 +82,7 @@ const InvestorCard: FC = () => {
 									<div className="relative bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl shadow-lg p-6 w-72 h-96">
 										{/* Visa logo */}
 										<div className="absolute top-6 right-6">
-											<SiVisa className="text-white text-4xl" />
+											<SiVisa className="text-white text-6xl" />
 										</div>
 
 										{/* Card elements with original style */}
