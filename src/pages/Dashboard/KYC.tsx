@@ -3,7 +3,7 @@ import ProofOfIdentificationForm from "@/components/ProofOfIdentificationForm";
 import { contextData } from "@/context/AuthContext";
 import { CheckCircle, Clock, XCircle, FileText, RefreshCw } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const KYCStatusMessage = ({
 	status,
@@ -164,8 +164,8 @@ const KYCStatusMessage = ({
 						<div className="flex flex-col sm:flex-row items-center justify-between text-sm text-gray-600 dark:text-gray-400">
 							<p>Need help? Contact our support team</p>
 							<div className="flex items-center gap-4 mt-2 sm:mt-0">
-								<a
-									href="mailto:support@company.com"
+								<Link
+									to="/support"
 									className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
 								>
 									<svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -176,8 +176,8 @@ const KYCStatusMessage = ({
 											d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
 										/>
 									</svg>
-									support@company.com
-								</a>
+									support@bluevestapty.club
+								</Link>
 							</div>
 						</div>
 					</div>

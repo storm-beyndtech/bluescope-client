@@ -39,13 +39,21 @@ const Navbar: FC = () => {
 					<Link to="/events" className="text-sm font-medium hover:text-blue-100">
 						Event
 					</Link>
-					<Link
-						to="/signup"
-						className="flex items-center h-10 bg-white text-black  text-sm font-medium px-4 py-2 rounded-xl hover:bg-white/90  transition-colors text-center"
-					>
-						Create an Account
-						<ArrowRight className="w-4 h-4 ml-2" />
-					</Link>
+					<div className="flex items-center space-x-2">
+						<Link
+							to="/login"
+							className="flex items-center h-10 bg-blue-500 text-white  text-sm font-medium px-4 py-1.5 rounded-xl hover:bg-blue-800  transition-colors text-center"
+						>
+							Sign in
+						</Link>
+						<Link
+							to="/signup"
+							className="flex items-center h-10 bg-white text-black  text-sm font-medium px-4 py-1.5 rounded-xl hover:bg-white/90  transition-colors text-center"
+						>
+							Create an Account
+							<ArrowRight className="w-4 h-4 ml-2" />
+						</Link>
+					</div>
 				</div>
 
 				{/* Mobile menu button */}
@@ -80,15 +88,27 @@ const Navbar: FC = () => {
 						<Link to="/support" className="text-sm font-medium hover:text-blue-500">
 							Support
 						</Link>
+						<Link to="/retirement" className="text-sm font-medium hover:text-blue-500">
+							Retirement
+						</Link>
 						<Link to="/events" className="text-sm font-medium hover:text-blue-500">
 							Event
 						</Link>
-						<Link
-							to="/signup"
-							className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-xl hover:bg-blue-600/90 transition-colors text-center"
-						>
-							Create an Account
-						</Link>
+
+						<div className="flex flex-col space-y-2 mt-4">
+							<Link
+								to="/signup"
+								className="bg-blue-600 text-white text-sm font-medium px-4 py-2 rounded-xl hover:bg-blue-600/90 transition-colors text-center"
+							>
+								Create an Account
+							</Link>
+							<Link
+								to="/login"
+								className="bg-white border border-gray-300 text-gray-600 text-sm font-medium px-4 py-2 rounded-xl transition-colors text-center"
+							>
+								Sign in
+							</Link>
+						</div>
 					</div>
 				</motion.div>
 			)}

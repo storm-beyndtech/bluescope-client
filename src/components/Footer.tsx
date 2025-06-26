@@ -35,8 +35,8 @@ const Footer: FC = () => {
             <div>
               <p className="text-sm mb-4 font-medium">Need more information?</p>
               <ul className="space-y-2">
-                <li><Link to="#" className="hover:underline">Fizmed Announcements</Link></li>
-                <li><Link to="#" className="hover:underline">Customer Support</Link></li>
+                <li><Link to="/events" className="hover:underline">Bluevestapty Announcements</Link></li>
+                <li><Link to="/support" className="hover:underline">Customer Support</Link></li>
               </ul>
             </div>
 
@@ -64,7 +64,7 @@ const Footer: FC = () => {
 
         {/* Copyright */}
         <div className="pt-8 mt-10 border-t border-gray-400 text-left">
-          <p className="text-xs">© {new Date().getFullYear()} Fizmed. All rights reserved.</p>
+          <p className="text-xs">© {new Date().getFullYear()} Bluevestapty. All rights reserved.</p>
         </div>
       </div>
     </footer>
