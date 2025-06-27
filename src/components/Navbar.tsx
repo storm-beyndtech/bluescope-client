@@ -22,13 +22,13 @@ const Navbar: FC = () => {
 						Home
 					</Link>
 					<Link to="/about" className="text-sm font-medium hover:text-blue-100">
-						About Us
+						About
 					</Link>
 					<Link to="/projects" className="text-sm font-medium hover:text-blue-100">
-						Our Projects
+						Projects
 					</Link>
 					<Link to="/reports" className="text-sm font-medium hover:text-blue-100">
-						Bsp Annual Report
+						Annual Report
 					</Link>
 					<Link to="/support" className="text-sm font-medium hover:text-blue-100">
 						Support
@@ -77,13 +77,13 @@ const Navbar: FC = () => {
 							Home
 						</Link>
 						<Link to="/about" className="text-sm font-medium hover:text-blue-500">
-							About Us
+							About
 						</Link>
 						<Link to="/projects" className="text-sm font-medium hover:text-blue-500">
-							Our Projects
+							Projects
 						</Link>
 						<Link to="/reports" className="text-sm font-medium hover:text-blue-500">
-							Bsp Annual Report
+							Annual Report
 						</Link>
 						<Link to="/support" className="text-sm font-medium hover:text-blue-500">
 							Support
