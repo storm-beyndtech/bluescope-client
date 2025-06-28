@@ -113,7 +113,7 @@ const ManageInvestmentModal: React.FC<ManageInvestmentModalProps> = ({ toggleMod
 				<div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
 					<div className="flex items-center gap-3">
 						<div className="p-2 bg-blue-100 dark:bg-blue-900/20 rounded-lg">
-							<TrendingUp className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+							<TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400" />
 						</div>
 						<div>
 							<h3 className="text-lg font-semibold text-gray-900 dark:text-white">Manage Investment</h3>
@@ -396,10 +396,10 @@ const ManageInvestments: React.FC = () => {
 
 				{/* Stats Cards */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-					<div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+					<div className="bg-white dark:bg-gray-800 rounded-xl p-6 px-3 shadow-sm border border-gray-200 dark:border-gray-700">
 						<div className="flex items-center">
 							<div className="p-3 bg-blue-100 dark:bg-blue-900/20 rounded-lg">
-								<TrendingUp className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+								<TrendingUp className="w-4 h-4 text-blue-600 dark:text-blue-400" />
 							</div>
 							<div className="ml-4">
 								<p className="text-sm font-medium text-gray-600 dark:text-gray-400">Total</p>
@@ -408,10 +408,10 @@ const ManageInvestments: React.FC = () => {
 						</div>
 					</div>
 
-					<div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+					<div className="bg-white dark:bg-gray-800 rounded-xl p-6 px-3 shadow-sm border border-gray-200 dark:border-gray-700">
 						<div className="flex items-center">
 							<div className="p-3 bg-yellow-100 dark:bg-yellow-900/20 rounded-lg">
-								<Clock className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
+								<Clock className="w-4 h-4 text-yellow-600 dark:text-yellow-400" />
 							</div>
 							<div className="ml-4">
 								<p className="text-sm font-medium text-gray-600 dark:text-gray-400">Pending</p>
@@ -420,10 +420,10 @@ const ManageInvestments: React.FC = () => {
 						</div>
 					</div>
 
-					<div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+					<div className="bg-white dark:bg-gray-800 rounded-xl p-6 px-3 shadow-sm border border-gray-200 dark:border-gray-700">
 						<div className="flex items-center">
 							<div className="p-3 bg-green-100 dark:bg-green-900/20 rounded-lg">
-								<CheckCircle className="w-6 h-6 text-green-600 dark:text-green-400" />
+								<CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400" />
 							</div>
 							<div className="ml-4">
 								<p className="text-sm font-medium text-gray-600 dark:text-gray-400">Approved</p>
@@ -432,10 +432,10 @@ const ManageInvestments: React.FC = () => {
 						</div>
 					</div>
 
-					<div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+					<div className="bg-white dark:bg-gray-800 rounded-xl p-6 px-3 shadow-sm border border-gray-200 dark:border-gray-700">
 						<div className="flex items-center">
 							<div className="p-3 bg-purple-100 dark:bg-purple-900/20 rounded-lg">
-								<TrendingUp className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+								<TrendingUp className="w-4 h-4 text-purple-600 dark:text-purple-400" />
 							</div>
 							<div className="ml-4">
 								<p className="text-sm font-medium text-gray-600 dark:text-gray-400">Completed</p>
@@ -444,10 +444,10 @@ const ManageInvestments: React.FC = () => {
 						</div>
 					</div>
 
-					<div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+					<div className="bg-white dark:bg-gray-800 rounded-xl p-6 px-3 shadow-sm border border-gray-200 dark:border-gray-700">
 						<div className="flex items-center">
 							<div className="p-3 bg-indigo-100 dark:bg-indigo-900/20 rounded-lg">
-								<DollarSign className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
+								<DollarSign className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
 							</div>
 							<div className="ml-4">
 								<p className="text-sm font-medium text-gray-600 dark:text-gray-400">Total Value</p>
