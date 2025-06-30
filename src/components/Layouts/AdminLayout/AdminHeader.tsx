@@ -100,13 +100,13 @@ const AdminHeader = (props: {
 
                   <div className="border-t border-gray-200 dark:border-gray-700 mt-2 pt-2">
                     <Link
-                      to="/admin/manage-deposits"
+                      to="/admin/pending-deposits"
                       className="block px-4 py-2 text-sm text-green-600 dark:text-green-400 font-medium"
                     >
                       View all deposits
                     </Link>
                     <Link
-                      to="/admin/manage-withdrawals"
+                      to="/admin/pending-withdrawals"
                       className="block px-4 py-2 text-sm text-blue-600 dark:text-blue-400 font-medium"
                     >
                       View all withdrawals
