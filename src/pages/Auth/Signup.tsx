@@ -51,9 +51,7 @@ const Signup = () => {
 	const [errors, setErrors] = useState<ValidationErrors>({});
 	const { login } = contextData();
 	const navigate = useNavigate();
-
-	// Form data state
-	const [formData, setFormData] = useState<FormData>({
+	const emptyFormData: FormData = {
 		firstName: "",
 		lastName: "",
 		username: "",
@@ -62,7 +60,9 @@ const Signup = () => {
 		password: "",
 		confirmPassword: "",
 		agreeToTerms: false,
-	});
+	};
+	// Form data state
+	const [formData, setFormData] = useState<FormData>(emptyFormData);
 
 	// Auto-detect user's country using ipapi.co (free service)
 	useEffect(() => {
@@ -221,7 +221,8 @@ const Signup = () => {
 				username: formData.username,
 				phone: formData.phone,
 				password: formData.password,
-				country: selectedCountry,
+        country: selectedCountry,
+        referrer: localStorage.getItem("referrer") || "",
 			});
 			setSubmitMessage("Account created successfully! Welcome aboard! 🎉");
 
@@ -234,16 +235,7 @@ const Signup = () => {
 			setSubmitMessage(`Error: ${errorMessage}. Please try again.`);
 		} finally {
 			setIsSubmitting(false);
-			setFormData({
-				firstName: "",
-				lastName: "",
-				username: "",
-				email: "",
-				phone: "",
-				password: "",
-				confirmPassword: "",
-				agreeToTerms: false,
-			});
+			setFormData(emptyFormData);
 			setSelectedCountry("");
 		}
 	};

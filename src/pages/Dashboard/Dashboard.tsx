@@ -197,7 +197,7 @@ const Dashboard = () => {
 												Earn Commission!
 											</h3>
 											<p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
-												You earn commission when your referrals make investments on our platform.
+												You earn commission when your referrals make deposits on our platform.
 											</p>
 										</div>
 									</div>
