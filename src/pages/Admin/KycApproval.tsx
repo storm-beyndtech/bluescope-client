@@ -86,7 +86,7 @@ export default function KycApproval() {
 		setSelectedSubmissions([]);
 	};
 
-	const handleApproveSubmission = async (submissionId: string, email: string) => {
+	const handleApproveSubmission = async (submissionId: string, email: string, kycStatus: boolean) => {
 		try {
 			// API call to approve the KYC
 			const res = await fetch(`${url}/kycs`, {
@@ -96,7 +96,8 @@ export default function KycApproval() {
 				},
 				body: JSON.stringify({
 					email,
-					kyc: submissionId,
+          kyc: submissionId,
+          kycStatus
 				}),
 			});
 
@@ -129,23 +130,8 @@ export default function KycApproval() {
 		}
 	};
 
-	const handleRejectSubmission = async (submissionId: string) => {
-		try {
-			// Simulate API call
-			console.log(`Rejecting submission: ${submissionId}`);
-
-			// In a real app, you might want to add a rejection reason or remove the submission
-			alert("Rejection functionality would be implemented here");
-		} catch (error) {
-			console.error("Error rejecting submission:", error);
-		}
-	};
-
 	const handleBulkApprove = async () => {
 		try {
-			console.log(`Bulk approving submissions: ${selectedSubmissions}`);
-
-			// Loop through the selected submissions and make API requests
 			await Promise.all(
 				selectedSubmissions.map(async (submissionId) => {
 					// Find the submission to get its email
@@ -361,14 +347,14 @@ export default function KycApproval() {
 										{!submission.status && (
 											<>
 												<button
-													onClick={() => handleApproveSubmission(submission._id, submission.email)}
+													onClick={() => handleApproveSubmission(submission._id, submission.email, true)}
 													className="p-1 text-green-600 hover:bg-green-100 rounded"
 													title="Approve"
 												>
 													<Check size={16} />
 												</button>
 												<button
-													onClick={() => handleRejectSubmission(submission._id)}
+													onClick={() => handleApproveSubmission(submission._id, submission.email, false)}
 													className="p-1 text-red-600 hover:bg-red-100 rounded"
 													title="Reject"
 												>

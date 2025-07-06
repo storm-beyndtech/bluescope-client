@@ -49,6 +49,7 @@ import ManageInvestments from "./pages/Admin/ManageInvestments";
 import InvestmentHistory from "./pages/Admin/InvestmentHistory";
 import AdminInvestmentPlans from "./pages/Admin/ManagePlans";
 import Retirement from "./pages/Retirement";
+import ForgotPassword from "./pages/Auth/ForgotPassword";
 
 function App() {
 	const [assetsLoaded, setAssetsLoaded] = useState(false);
@@ -195,7 +196,8 @@ function App() {
 				<>
 					{/* Not logged in - Auth routes */}
 					<Route path="/login" element={<Login />} />
-					<Route path="/signup" element={<Signup />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
 
 					{/* Public Routes (for non-logged-in users) */}
 					<Route
