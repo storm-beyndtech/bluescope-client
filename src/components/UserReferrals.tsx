@@ -8,10 +8,10 @@ export default function UserReferrals() {
   const [loading, setLoading] = useState(false);
   const url = import.meta.env.VITE_REACT_APP_SERVER_URL;
 
-  const handleCopy = async (textToCopy: string) => {
+  const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(
-        `https://interactive-copyelite.com/register/${textToCopy}`,
+        `${window.location.origin}/?ref=${user.username}`,
       );
       alert('Text copied to clipboard');
     } catch (err) {
@@ -56,12 +56,12 @@ export default function UserReferrals() {
         <div className="flex items-center gap-2">
           <input
             type="text"
-            value={`https://interactive-copyelite.com/register/${user.username}`}
+            value={`${window.location.origin}/?ref=${user.username}`}
             readOnly
             className="flex-1 p-3 dark:bg-gray-700 bg-gray-50 border dark:border-gray-600 border-gray-300 rounded-md dark:text-white text-gray-900"
           />
           <button
-            onClick={() => handleCopy(user.username)}
+            onClick={() => handleCopy()}
             className="bg-blue-500 hover:bg-blue-600 p-3 rounded-md"
           >
             <CheckSquare size={20} />
