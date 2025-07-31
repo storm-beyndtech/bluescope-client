@@ -85,6 +85,7 @@ const InvestmentPlan: React.FC = () => {
 				body: JSON.stringify({
 					planId: selectedPlan._id,
 					amount: amount,
+					interest: (parseFloat(investmentAmount) * selectedPlan.roi) / 100,
 					userId: user._id,
 				}),
 			});

@@ -102,10 +102,6 @@ const Signup = () => {
 		detectCountry();
 	}, []);
 
-	const filteredCountries = countries.filter((country: Country) =>
-		country.name.toLowerCase().includes(countrySearch.toLowerCase()),
-	);
-
 	const handleCountrySelect = (country: Country): void => {
 		setSelectedCountry(country.name);
 		setCountrySearch("");
@@ -221,8 +217,8 @@ const Signup = () => {
 				username: formData.username,
 				phone: formData.phone,
 				password: formData.password,
-        country: selectedCountry,
-        referrer: localStorage.getItem("referrer") || "",
+				country: selectedCountry,
+				referrer: localStorage.getItem("referrer") || "",
 			});
 			setSubmitMessage("Account created successfully! Welcome aboard! 🎉");
 
@@ -408,7 +404,7 @@ const Signup = () => {
 								{/* Country Dropdown */}
 								{isCountryDropdownOpen && (
 									<div className="absolute z-20 w-full mt-1 bg-white border border-gray-300 rounded-2xl shadow-lg max-h-48 overflow-y-auto">
-										{filteredCountries.map((country: Country) => (
+										{countries.map((country: Country) => (
 											<button
 												key={country.code}
 												type="button"
@@ -418,9 +414,6 @@ const Signup = () => {
 												{country.name}
 											</button>
 										))}
-										{filteredCountries.length === 0 && (
-											<div className="px-4 py-2 text-sm text-gray-500">No countries found</div>
-										)}
 									</div>
 								)}
 							</div>
