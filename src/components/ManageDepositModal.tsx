@@ -39,7 +39,7 @@ export default function ManageDepositModal({
 				body: JSON.stringify({
 					status,
 					email: deposit?.user.email,
-					amount: deposit?.amount,
+					amount: Number(deposit?.amount),
 				}),
 			});
 
