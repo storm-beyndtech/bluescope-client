@@ -43,15 +43,6 @@ export default function EditUserModal({ userData, handleUserData }: any) {
 		e.preventDefault();
 		setError(null);
 
-		if (fullName.length < 3) return setError("Full name must be at least 3 characters");
-		if (email.length < 7) return setError("Email must be at least 7 characters");
-		if (selectedCountry === "none" || selectedCountry === "") return setError("No country was selected");
-		if (phoneNumber.length < 3) return setError("Invalid phone number");
-		if (address.length < 3) return setError("Address must be at least 3 characters");
-		if (state.length < 3) return setError("State must be at least 3 characters");
-		if (city.length < 3) return setError("City must be at least 3 characters");
-		if (zipCode.length < 3) return setError("Zip Code must be at least 3 characters");
-
 		const [firstName, ...rest] = fullName.trim().split(" ");
 		const lastName = rest.join(" ") || "";
 

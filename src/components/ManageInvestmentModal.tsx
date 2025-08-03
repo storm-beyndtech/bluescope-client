@@ -56,10 +56,6 @@ const ManageInvestmentModal: React.FC<ManageInvestmentModalProps> = ({ toggleMod
 		return maturity.toLocaleDateString();
 	};
 
-	const calculateInterestAmount = (amount: number, interest: number): number => {
-		return (amount * interest) / 100;
-	};
-
 	const startUpdate = async (status: "approved" | "rejected" | "completed") => {
 		setError(null);
 		setSuccess(null);
@@ -92,9 +88,6 @@ const ManageInvestmentModal: React.FC<ManageInvestmentModalProps> = ({ toggleMod
 	};
 
 	if (!investment) return null;
-
-	const interestAmount = calculateInterestAmount(investment.amount, investment.planData.interest);
-	const totalReturn = investment.amount + interestAmount;
 
 	return (
 		<div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm bg-black/30 px-4">
@@ -186,19 +179,19 @@ const ManageInvestmentModal: React.FC<ManageInvestmentModalProps> = ({ toggleMod
 							<div>
 								<p className="text-xs text-gray-500 dark:text-gray-400">Interest Rate</p>
 								<p className="text-sm font-medium text-gray-900 dark:text-white">
-									{investment.planData.interest}%
+									{(investment.planData.interest / investment.amount) * 100}%
 								</p>
 							</div>
 							<div>
 								<p className="text-xs text-gray-500 dark:text-gray-400">Interest Amount</p>
 								<p className="text-sm font-medium text-green-600 dark:text-green-400">
-									${interestAmount.toLocaleString()}
+									${investment.planData.interest.toLocaleString()}
 								</p>
 							</div>
 							<div>
 								<p className="text-xs text-gray-500 dark:text-gray-400">Total Return</p>
 								<p className="text-sm font-medium text-blue-600 dark:text-blue-400">
-									${totalReturn.toLocaleString()}
+									${(investment.planData.interest + investment.amount).toLocaleString()}
 								</p>
 							</div>
 						</div>
