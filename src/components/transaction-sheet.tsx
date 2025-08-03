@@ -101,11 +101,6 @@ const TransactionSheet: React.FC<TransactionSheetProps> = ({ transaction, isOpen
 		}).format(amount);
 	};
 
-	// Calculate expected return for investment transactions
-	const calculateExpectedReturn = (amount: number, interest: number) => {
-		return (amount * interest) / 100;
-	};
-
 	return (
 		<>
 			{/* Backdrop */}
@@ -179,9 +174,7 @@ const TransactionSheet: React.FC<TransactionSheetProps> = ({ transaction, isOpen
 										<div>
 											<div className="flex items-center justify-center gap-2 mb-1">
 												<p className="text-2xl font-bold text-green-600 dark:text-green-400">
-													{formatCurrency(
-														calculateExpectedReturn(transaction.amount, transaction.planData.interest),
-													)}
+													{formatCurrency(transaction.planData.interest)}
 												</p>
 											</div>
 											<p className="text-sm text-slate-500 dark:text-slate-400">Expected Return</p>
@@ -189,7 +182,7 @@ const TransactionSheet: React.FC<TransactionSheetProps> = ({ transaction, isOpen
 											<div className="flex items-center justify-center gap-4 pt-2">
 												<div className="text-center">
 													<p className="text-lg font-bold text-emerald-600 dark:text-emerald-400">
-														{transaction.planData.interest}%
+														{(transaction.planData.interest / transaction.amount) * 100}%
 													</p>
 													<p className="text-xs text-slate-500 dark:text-slate-400">Interest Rate</p>
 												</div>
@@ -271,7 +264,7 @@ const TransactionSheet: React.FC<TransactionSheetProps> = ({ transaction, isOpen
 											<div className="flex justify-between items-center">
 												<span className="text-slate-600 dark:text-slate-400">Interest Rate</span>
 												<span className="font-medium text-emerald-600 dark:text-emerald-400">
-													{transaction.planData.interest}%
+													{(transaction.planData.interest / transaction.amount) * 100}%
 												</span>
 											</div>
 										</div>
@@ -345,9 +338,7 @@ const TransactionSheet: React.FC<TransactionSheetProps> = ({ transaction, isOpen
 										<div className="flex justify-between items-center">
 											<span className="text-slate-600 dark:text-slate-400">Expected Return</span>
 											<span className="font-medium text-green-600 dark:text-green-400">
-												{formatCurrency(
-													calculateExpectedReturn(transaction.amount, transaction.planData.interest),
-												)}
+												{formatCurrency(transaction.planData.interest)}
 											</span>
 										</div>
 									)}
@@ -358,10 +349,7 @@ const TransactionSheet: React.FC<TransactionSheetProps> = ({ transaction, isOpen
 										<div className="flex justify-between items-center">
 											<span className="text-slate-600 dark:text-slate-400">Total Payout</span>
 											<span className="font-medium text-slate-900 dark:text-slate-100">
-												{formatCurrency(
-													transaction.amount +
-														calculateExpectedReturn(transaction.amount, transaction.planData.interest),
-												)}
+												{formatCurrency(transaction.amount + transaction.planData.interest)}
 											</span>
 										</div>
 									)}
@@ -415,10 +403,8 @@ const TransactionSheet: React.FC<TransactionSheetProps> = ({ transaction, isOpen
 									{transaction.type === "investment" && transaction.planData && (
 										<>
 											{" "}
-											The total payout of{" "}
-											{formatCurrency(
-												transaction.amount +
-													calculateExpectedReturn(transaction.amount, transaction.planData.interest),
+											The total payout of {formatCurrency(
+												transaction.amount + transaction.planData.interest,
 											)}{" "}
 											has been credited to your account.
 										</>

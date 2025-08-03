@@ -245,7 +245,7 @@ const ManageInvestments: React.FC = () => {
 														{investment.planData.plan}
 													</div>
 													<div className="text-sm text-gray-500 dark:text-gray-400">
-														{investment.planData.duration} days • {investment.planData.interest}%
+														{investment.planData.duration} days • {(investment.planData.interest / investment.amount) * 100}%
 													</div>
 												</td>
 												<td className="px-6 py-4">

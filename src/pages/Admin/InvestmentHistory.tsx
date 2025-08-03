@@ -121,12 +121,12 @@ const InvestmentHistory: React.FC = () => {
 		const completed = filteredInvestments.filter((inv) => inv.status === "completed");
 		const totalInvested = filteredInvestments.reduce((sum, inv) => sum + inv.amount, 0);
 		const totalReturns = completed.reduce((sum, inv) => {
-			const interest = (inv.amount * inv.planData.interest) / 100;
-			return sum + inv.amount + interest;
+			return sum + inv.planData.interest;
 		}, 0);
 		const avgReturn =
 			completed.length > 0
-				? completed.reduce((sum, inv) => sum + inv.planData.interest, 0) / completed.length
+				? completed.reduce((sum, inv) => sum + (inv.planData.interest / inv.amount) * 100, 0) /
+				  completed.length
 				: 0;
 
 		return {
@@ -295,8 +295,7 @@ const InvestmentHistory: React.FC = () => {
 								<tbody>
 									{filteredInvestments.length > 0 ? (
 										filteredInvestments.map((investment, i) => {
-											const interestAmount = (investment.amount * investment.planData.interest) / 100;
-											const totalReturn = investment.amount + interestAmount;
+											const totalReturn = investment.amount + investment.planData.interest;
 
 											return (
 												<tr
@@ -329,7 +328,8 @@ const InvestmentHistory: React.FC = () => {
 															{investment.planData.plan}
 														</div>
 														<div className="text-sm text-gray-500 dark:text-gray-400">
-															{investment.planData.duration} days • {investment.planData.interest}%
+															{investment.planData.duration} days •{" "}
+															{(investment.planData.interest / investment.amount) * 100}%
 														</div>
 													</td>
 													<td className="px-6 py-4">
@@ -339,7 +339,7 @@ const InvestmentHistory: React.FC = () => {
 													</td>
 													<td className="px-6 py-4">
 														<div className="text-sm font-medium text-gray-900 dark:text-white">
-															${interestAmount.toLocaleString()}
+															${investment.planData.interest.toLocaleString()}
 														</div>
 														<div className="text-sm text-gray-500 dark:text-gray-400">
 															Total: ${totalReturn.toLocaleString()}

@@ -195,7 +195,8 @@ const ManageInvestmentModal: React.FC<ManageInvestmentModalProps> = ({ toggleMod
 								</p>
 							</div>
 						</div>
-					</div>
+          </div>
+          
 
 					{/* Timeline */}
 					<div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">

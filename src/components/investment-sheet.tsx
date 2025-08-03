@@ -10,11 +10,6 @@ interface InvestmentSheetProps {
 const InvestmentSheet: React.FC<InvestmentSheetProps> = ({ investment, isOpen, onClose }) => {
 	if (!isOpen || !investment) return null;
 
-	// Calculate expected return based on interest and amount
-	const calculateExpectedReturn = (amount: number, interest: number) => {
-		return (amount * interest) / 100;
-	};
-
 	// Generate transaction number from ID and date
 	const generateTransactionNumber = (transaction: Transaction) => {
 		const date = new Date(transaction.date);
@@ -79,8 +74,6 @@ const InvestmentSheet: React.FC<InvestmentSheetProps> = ({ investment, isOpen, o
 		}).format(amount);
 	};
 
-	const expectedReturn = calculateExpectedReturn(investment.amount, investment.planData.interest);
-
 	return (
 		<>
 			{/* Backdrop */}
@@ -141,7 +134,7 @@ const InvestmentSheet: React.FC<InvestmentSheetProps> = ({ investment, isOpen, o
 								<div>
 									<div className="flex items-center justify-center gap-2 mb-1">
 										<p className="text-2xl font-bold text-green-600 dark:text-green-400">
-											{formatCurrency(expectedReturn)}
+											{formatCurrency(investment.planData.interest)}
 										</p>
 									</div>
 									<p className="text-sm text-slate-500 dark:text-slate-400">Expected Return</p>
@@ -174,19 +167,19 @@ const InvestmentSheet: React.FC<InvestmentSheetProps> = ({ investment, isOpen, o
 								<div className="flex justify-between items-center">
 									<span className="text-slate-600 dark:text-slate-400">Expected Return</span>
 									<span className="font-medium text-green-600 dark:text-green-400">
-										{formatCurrency(expectedReturn)}
+										{formatCurrency(investment.planData.interest)}
 									</span>
 								</div>
 								<div className="flex justify-between items-center">
 									<span className="text-slate-600 dark:text-slate-400">Total Payout</span>
 									<span className="font-medium text-slate-900 dark:text-slate-100">
-										{formatCurrency(investment.amount + expectedReturn)}
+										{formatCurrency(investment.amount + investment.planData.interest)}
 									</span>
 								</div>
 								<div className="flex justify-between items-center">
 									<span className="text-slate-600 dark:text-slate-400">Interest Rate</span>
 									<span className="font-medium text-emerald-600 dark:text-emerald-400">
-										{investment.planData.interest}%
+										{(investment.planData.interest / investment.amount) * 100} %
 									</span>
 								</div>
 								<div className="flex justify-between items-center">
@@ -229,8 +222,10 @@ const InvestmentSheet: React.FC<InvestmentSheetProps> = ({ investment, isOpen, o
 								</h4>
 								<p className="text-sm text-green-800 dark:text-green-200">
 									Congratulations! Your investment has matured successfully. The total payout of{" "}
-									<span className="font-bold">{formatCurrency(investment.amount + expectedReturn)}</span> has
-									been credited to your account.
+									<span className="font-bold">
+										{formatCurrency(investment.amount + investment.planData.interest)}
+									</span>{" "}
+									has been credited to your account.
 								</p>
 							</div>
 						)}

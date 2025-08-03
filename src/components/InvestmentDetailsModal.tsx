@@ -1,12 +1,5 @@
 import React from "react";
-import {
-	TrendingUp,
-	BarChart3,
-	PieChart,
-	Activity,
-	ArrowUpRight,
-	ArrowDownRight,
-} from "lucide-react";
+import { TrendingUp, BarChart3, PieChart, Activity, ArrowUpRight, ArrowDownRight } from "lucide-react";
 
 interface User {
 	id: string;
@@ -37,9 +30,6 @@ interface InvestmentDetailsModalProps {
 
 const InvestmentDetailsModal: React.FC<InvestmentDetailsModalProps> = ({ investment, onClose }) => {
 	if (!investment) return null;
-
-	const interestAmount = (investment.amount * investment.planData.interest) / 100;
-	const totalReturn = investment.amount + interestAmount;
 	const startDate = new Date(investment.date);
 	const maturityDate = new Date(startDate);
 	maturityDate.setDate(startDate.getDate() + parseInt(investment.planData.duration));
@@ -192,10 +182,10 @@ const InvestmentDetailsModal: React.FC<InvestmentDetailsModalProps> = ({ investm
 								<h3 className="font-semibold text-green-900 dark:text-green-100">Interest Earned</h3>
 							</div>
 							<p className="text-2xl font-bold text-green-900 dark:text-green-100">
-								${interestAmount.toLocaleString()}
+								${investment.planData.interest}
 							</p>
 							<p className="text-sm text-green-700 dark:text-green-300">
-								{investment.planData.interest}% return
+								{(investment.planData.interest / investment.amount) * 100}% return
 							</p>
 						</div>
 
@@ -207,10 +197,10 @@ const InvestmentDetailsModal: React.FC<InvestmentDetailsModalProps> = ({ investm
 								<h3 className="font-semibold text-purple-900 dark:text-purple-100">Total Return</h3>
 							</div>
 							<p className="text-2xl font-bold text-purple-900 dark:text-purple-100">
-								${totalReturn.toLocaleString()}
+								${(investment.amount + investment.planData.interest).toLocaleString()}
 							</p>
 							<p className="text-sm text-purple-700 dark:text-purple-300">
-								{((interestAmount / investment.amount) * 100).toFixed(1)}% gain
+								{((investment.planData.interest / investment.amount) * 100)}% gain
 							</p>
 						</div>
 					</div>
@@ -235,7 +225,7 @@ const InvestmentDetailsModal: React.FC<InvestmentDetailsModalProps> = ({ investm
 								<div className="flex justify-between">
 									<span className="text-gray-600 dark:text-gray-400">Interest Rate</span>
 									<span className="font-medium text-gray-900 dark:text-white">
-										{investment.planData.interest}%
+										{(investment.planData.interest / investment.amount) * 100}%
 									</span>
 								</div>
 								<div className="flex justify-between">
@@ -313,6 +303,5 @@ const InvestmentDetailsModal: React.FC<InvestmentDetailsModalProps> = ({ investm
 		</div>
 	);
 };
-
 
 export default InvestmentDetailsModal;

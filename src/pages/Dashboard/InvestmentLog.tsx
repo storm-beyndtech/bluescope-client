@@ -414,7 +414,7 @@ const InvestmentLog: React.FC = () => {
 													<span className="text-slate-500 dark:text-slate-400">
 														Interest:{" "}
 														<span className="font-medium text-emerald-600 dark:text-emerald-400">
-															{transaction.planData.interest}%
+															{(transaction.planData.interest / transaction.amount) * 100}%
 														</span>
 													</span>
 													<span className="text-slate-500 dark:text-slate-400">
