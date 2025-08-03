@@ -52,7 +52,7 @@ export default function EditUserModal({ userData, handleUserData }: any) {
 			lastName,
 			country: selectedCountry,
 			phone: phoneNumber,
-			address,
+			streetAddress: address,
 			state,
 			city,
 			zipCode,

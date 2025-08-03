@@ -7,7 +7,7 @@ interface FormData {
   email: string;
   firstName: string;
   lastName: string;
-  province: string;
+  state: string;
   phone: string;
   city: string;
   zipCode: string;
@@ -63,7 +63,7 @@ export default function ProfileInfo() {
     email: '',
     firstName: '',
     lastName: '',
-    province: '',
+    state: '',
     phone: '',
     city: '',
     zipCode: '',
@@ -181,7 +181,7 @@ export default function ProfileInfo() {
       // Append all fields (including empty ones - let backend handle)
       formPayload.append('firstName', formData.firstName || '');
       formPayload.append('lastName', formData.lastName || '');
-      formPayload.append('province', formData.province || '');
+      formPayload.append('state', formData.state || '');
       formPayload.append('phone', formData.phone || '');
       formPayload.append('city', formData.city || '');
       formPayload.append('zipCode', formData.zipCode || '');
@@ -364,22 +364,22 @@ export default function ProfileInfo() {
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1">
-                Province
+                State
               </label>
               <input
                 type="text"
-                name="province"
-                value={formData.province}
+                name="state"
+                value={formData.state}
                 onChange={handleInputChange}
                 className={`w-full p-3 bg-gray-50 dark:bg-gray-800 border rounded-xl text-gray-900 dark:text-white ${
-                  errors.province
+                  errors.state
                     ? 'border-red-400 dark:border-red-500'
                     : 'border-gray-300 dark:border-gray-700'
                 }`}
               />
-              {errors.province && (
+              {errors.state && (
                 <p className="text-red-600 dark:text-red-400 text-xs mt-1">
-                  {errors.province}
+                  {errors.state}
                 </p>
               )}
             </div>
