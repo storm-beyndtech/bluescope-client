@@ -253,7 +253,7 @@ const ManageInvestments: React.FC = () => {
 														${investment.amount.toLocaleString()}
 													</div>
 													<div className="text-sm text-gray-500 dark:text-gray-400">
-														+${((investment.amount * investment.planData.interest) / 100).toLocaleString()}{" "}
+														+${investment.planData.interest.toLocaleString()}{" "}
 														interest
 													</div>
 												</td>
