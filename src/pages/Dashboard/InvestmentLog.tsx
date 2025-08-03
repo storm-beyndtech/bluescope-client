@@ -122,11 +122,6 @@ const InvestmentLog: React.FC = () => {
 		setIsSheetOpen(true);
 	};
 
-	// Calculate expected return based on interest and amount
-	const calculateExpectedReturn = (amount: number, interest: number) => {
-		return (amount * interest) / 100;
-	};
-
 	// Format date
 	const formatDate = (dateString: string) => {
 		const date = new Date(dateString);
@@ -321,10 +316,6 @@ const InvestmentLog: React.FC = () => {
 										<tbody className="divide-y divide-slate-200 dark:divide-slate-700 bg-white dark:bg-slate-900">
 											{filteredTransactions.map((transaction) => {
 												const PlanIcon = getPlanIcon(transaction.planData.plan);
-												const expectedReturn = calculateExpectedReturn(
-													transaction.amount,
-													transaction.planData.interest,
-												);
 												return (
 													<tr
 														key={transaction._id}
@@ -350,11 +341,11 @@ const InvestmentLog: React.FC = () => {
 															{formatCurrency(transaction.amount)}
 														</td>
 														<td className="px-6 py-4 text-sm text-emerald-600 dark:text-emerald-400 font-medium">
-															{formatCurrency(expectedReturn)}
+															{formatCurrency(transaction.planData.interest)}
 														</td>
 														<td className="px-6 py-4">
 															<span className="text-sm font-medium text-emerald-600 dark:text-emerald-400">
-																{transaction.planData.interest}%
+																{((transaction.planData.interest / transaction.amount) * 100).toFixed(2)}%
 															</span>
 														</td>
 														<td className="px-6 py-4">{getStatusBadge(transaction.status)}</td>
@@ -383,11 +374,7 @@ const InvestmentLog: React.FC = () => {
 								{/* Mobile Cards */}
 								<div className="lg:hidden space-y-4">
 									{filteredTransactions.map((transaction) => {
-										const PlanIcon = getPlanIcon(transaction.planData.plan);
-										const expectedReturn = calculateExpectedReturn(
-											transaction.amount,
-											transaction.planData.interest,
-										);
+                    const PlanIcon = getPlanIcon(transaction.planData.plan);
 										return (
 											<div
 												key={transaction._id}
@@ -418,7 +405,7 @@ const InvestmentLog: React.FC = () => {
 													<div>
 														<p className="text-sm text-slate-500 dark:text-slate-400">Expected Return</p>
 														<p className="font-semibold text-emerald-600 dark:text-emerald-400">
-															{formatCurrency(expectedReturn)}
+															{formatCurrency(transaction.planData.interest)}
 														</p>
 													</div>
 												</div>
