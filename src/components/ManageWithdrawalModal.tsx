@@ -125,7 +125,7 @@ export default function ManageWithdrawalModal({
 						<div className="flex justify-between items-center">
 							<p className="text-sm text-gray-500 truncate dark:text-gray-400">Address</p>
 							<div className="flex items-center gap-2">
-								<p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+								<p className="w-40 text-sm font-medium text-gray-900 truncate dark:text-white">
 									{withdrawal.walletData.address}
 								</p>
 								<button
