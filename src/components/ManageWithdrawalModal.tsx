@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GrClose } from "react-icons/gr";
+import { GrClose, GrCopy } from "react-icons/gr"; // Added GrCopy import
 import Alert from "./UI/Alert";
 
 export default function ManageWithdrawalModal({
@@ -13,6 +13,7 @@ export default function ManageWithdrawalModal({
 	const [successLoading, setSuccessLoading] = useState(false);
 	const [failedLoading, setFailedLoading] = useState(false);
 	const [success, setSuccess] = useState(false);
+	const [isCopied, setIsCopied] = useState(false); // New state for copy button
 	const url = import.meta.env.VITE_REACT_APP_SERVER_URL;
 
 	const convertDate = (date: string) => {
@@ -47,6 +48,15 @@ export default function ManageWithdrawalModal({
 		} finally {
 			setSuccessLoading(false);
 			setFailedLoading(false);
+		}
+	};
+
+	// New function to handle copying wallet address
+	const handleCopyAddress = () => {
+		if (withdrawal?.walletData.address) {
+			navigator.clipboard.writeText(withdrawal.walletData.address);
+			setIsCopied(true);
+			setTimeout(() => setIsCopied(false), 2000); // Revert after 2 seconds
 		}
 	};
 
@@ -112,11 +122,20 @@ export default function ManageWithdrawalModal({
 							</p>
 						</div>
 
-						<div className="flex justify-between">
+						<div className="flex justify-between items-center">
 							<p className="text-sm text-gray-500 truncate dark:text-gray-400">Address</p>
-							<p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-								{withdrawal.walletData.address}
-							</p>
+							<div className="flex items-center gap-2">
+								<p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+									{withdrawal.walletData.address}
+								</p>
+								<button
+									type="button"
+									onClick={handleCopyAddress}
+									className="text-white bg-gray-600 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-3 py-1 text-center dark:bg-gray-500 dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+								>
+									{isCopied ? "Copied" : <GrCopy />}
+								</button>
+							</div>
 						</div>
 
 						<div className="flex justify-between">
@@ -130,15 +149,15 @@ export default function ManageWithdrawalModal({
 						{withdrawal.status === "pending" && (
 							<div className="flex gap-5">
 								<button
-                  disabled={successLoading}
+									disabled={successLoading}
 									onClick={() => startUpdate("approved")}
 									className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 								>
 									{successLoading ? "Loading..." : "Approve"}
 								</button>
 
-                <button
-                  disabled={failedLoading}
+								<button
+									disabled={failedLoading}
 									onClick={() => startUpdate("rejected")}
 									className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
 								>
